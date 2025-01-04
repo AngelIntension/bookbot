@@ -32,8 +32,10 @@ def get_character_counts(text):
 def character_counts_dictionary_to_sorted_list(character_counts):
     sorted_list = []
     for character in character_counts:
-        sorted_list.append({"character": character, "count": character_counts[character]})
-    sorted_list.sort(reverse=True, key=lambda dictionary: dictionary["count"])
+        sorted_list.append({
+                "character": character,
+                "count": character_counts[character]})
+    sorted_list.sort(reverse=True, key=lambda item: item["count"])
     return sorted_list
 
 main()
